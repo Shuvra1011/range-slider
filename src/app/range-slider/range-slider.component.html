@@ -1,0 +1,22 @@
+<div class="price-input">
+    <div class="field">
+      <span>Min</span>
+      <input type="number" class="input-min" readonly disabled [value]="minInputValue" (keyup)="onMinInputPriceChange($event)">
+    </div>
+    <div class="separator">-</div>
+    <div class="field">
+      <span>Max</span>
+      <input type="number" class="input-max" readonly disabled [value]="maxInputValue" (keyup)="onMinInputPriceChange($event)">
+    </div>
+  </div>
+  <div class="slider-overlay" >
+    <div class="slider__box-left" #boxLeft>{{minInputValue}}</div>
+    <div class="slider__box-right" #boxRight>{{maxInputValue}}</div>
+  </div>
+  <div class="slider" >
+    <div class="progress" #range ></div>
+  </div>
+  <div class="range-input">
+    <input type="range" [attr.data-value]="minInputValue" [attr.left]="boxLeft" class="range-min" [min]="min" [max]="max" [value]="minInputValue" step="1" (input)="onMinRangeChange($event)" #rangeMinInput>
+    <input type="range" class="range-max" [min]="min" [max]="max" [value]="maxInputValue" step="1" (input)="onMaxRangeChange($event)" #rangeMaxInput>
+  </div>

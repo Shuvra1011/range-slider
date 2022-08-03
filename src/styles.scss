@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #17A2B8;
+}
+::selection{
+  color: #fff;
+  background: #17A2B8;
+}

@@ -1,0 +1,7 @@
+$box-left: 0;
+$box-right: 0;
+
+:export {
+  boxLeft: $box-left;
+  boxRight: $box-right;
+}
